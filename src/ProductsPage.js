@@ -23,7 +23,7 @@ const ProductsPage = () => {
           <div key={product.id} className="col-md-4 mb-4">
             <div className="card h-100">
               <div className="card-img-container" style={{ height: '200px', overflow: 'hidden' }}>
-                <img 
+                <img
                   src={product.image} 
                   className="card-img-top" 
                   alt={product.name} 
@@ -36,7 +36,7 @@ const ProductsPage = () => {
               </div>
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">{product.description}</p>
+                <p className="card-text" style={{ fontWeight:'bolder' }}>{product.price}</p>
                 <Link to={`/product/${product.id}`} className="btn btn-primary mt-auto">View Product</Link>
               </div>
             </div>

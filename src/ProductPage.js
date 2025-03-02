@@ -21,17 +21,18 @@ const ProductPage = () => {
     <>
     <Header></Header>
     <div className="container">
-    <h1>Product Page</h1>
-    <div className="row">
+    <div className="row" style={{paddingTop:'40px'}}>
       {product.map(p => (
         <div key={p.id} className="col-md-4">
           <div className="card">
             <img src={p.image} className="card-img-top" alt={p.name} />
             <div className="card-body">
               <h5 className="card-title">{p.name}</h5>
-              <p className="card-text">{p.description}</p>
+              <p className="card-text" style={{ fontWeight:'bolder' }}>{p.price}</p>
             </div>
           </div>
+          <h4 style={{paddingTop:'20px',color:'#848884'}}>Description:</h4>
+          <p>{p.details}</p>
         </div>
       ))}
     </div>
